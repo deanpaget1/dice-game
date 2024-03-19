@@ -81,7 +81,7 @@ function setNewDiceOne(number) {
     document.getElementById("dice-o-dot-ei").style.display = "none";
     document.getElementById("dice-o-dot-ni").style.display = "block";
   } else {
-    resetDice();
+    resetDice(1);
   }
 }
 
@@ -137,29 +137,31 @@ function setNewDiceTwo(number) {
     document.getElementById("dice-t-dot-ei").style.display = "none";
     document.getElementById("dice-t-dot-ni").style.display = "block";
   } else {
-    resetDice();
+    resetDice(2);
   }
 }
 
 //Reset the dice back to all six
-function resetDice() {
-  document.getElementById("dice-o-dot-o").style.display = "block";
-  document.getElementById("dice-o-dot-tw").style.display = "none";
-  document.getElementById("dice-o-dot-th").style.display = "block";
-  document.getElementById("dice-o-dot-fo").style.display = "block";
-  document.getElementById("dice-o-dot-fi").style.display = "none";
-  document.getElementById("dice-o-dot-s").style.display = "block";
-  document.getElementById("dice-o-dot-se").style.display = "block";
-  document.getElementById("dice-o-dot-ei").style.display = "none";
-  document.getElementById("dice-o-dot-ni").style.display = "block";
-
-  document.getElementById("dice-t-dot-o").style.display = "block";
-  document.getElementById("dice-t-dot-tw").style.display = "none";
-  document.getElementById("dice-t-dot-th").style.display = "block";
-  document.getElementById("dice-t-dot-fo").style.display = "block";
-  document.getElementById("dice-t-dot-fi").style.display = "none";
-  document.getElementById("dice-t-dot-s").style.display = "block";
-  document.getElementById("dice-t-dot-se").style.display = "block";
-  document.getElementById("dice-t-dot-ei").style.display = "none";
-  document.getElementById("dice-t-dot-ni").style.display = "block";
+function resetDice(dice) {
+  if (dice === 1) {
+    document.getElementById("dice-o-dot-o").style.display = "block";
+    document.getElementById("dice-o-dot-tw").style.display = "none";
+    document.getElementById("dice-o-dot-th").style.display = "block";
+    document.getElementById("dice-o-dot-fo").style.display = "block";
+    document.getElementById("dice-o-dot-fi").style.display = "none";
+    document.getElementById("dice-o-dot-s").style.display = "block";
+    document.getElementById("dice-o-dot-se").style.display = "block";
+    document.getElementById("dice-o-dot-ei").style.display = "none";
+    document.getElementById("dice-o-dot-ni").style.display = "block";
+  } else if (dice === 2) {
+    document.getElementById("dice-t-dot-o").style.display = "block";
+    document.getElementById("dice-t-dot-tw").style.display = "none";
+    document.getElementById("dice-t-dot-th").style.display = "block";
+    document.getElementById("dice-t-dot-fo").style.display = "block";
+    document.getElementById("dice-t-dot-fi").style.display = "none";
+    document.getElementById("dice-t-dot-s").style.display = "block";
+    document.getElementById("dice-t-dot-se").style.display = "block";
+    document.getElementById("dice-t-dot-ei").style.display = "none";
+    document.getElementById("dice-t-dot-ni").style.display = "block";
+  }
 }
