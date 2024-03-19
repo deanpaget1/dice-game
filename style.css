@@ -1,0 +1,140 @@
+body{
+    background: linear-gradient(220deg, #2e2bff, #86c8fff5, #ff1111);
+     background-size: 200% 300%;
+     animation: gradient-animation 18s ease infinite;
+}
+
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.title{
+    font-size: 5rem;
+    text-align: center;
+    font-family: "Shadows Into Light", cursive;
+    font-style: italic;
+    color: white;
+}
+
+.container{
+    display: inline-flex;
+    gap: 100px;
+    width: 100%;
+    justify-content: center;
+    font-family: "Shadows Into Light", cursive;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+
+
+.col{
+    grid-column: 100%;
+}
+
+.dice{
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    border-radius: 10%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "dot-one dot-two dot-three"
+        "dot-four dot-five dot-six"
+        "dot-seven dot-eight dot-nine"
+        ;
+    justify-items: center;
+    align-items: center;
+}
+
+.dot{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    justify-content: center;
+}
+
+
+#dice-o-dot-o{
+    grid-area: dot-one;
+}
+
+#dice-o-dot-tw{
+    grid-area: dot-two;
+}
+
+#dice-o-dot-th{
+    grid-area: dot-three;
+}
+
+#dice-o-dot-fo{
+    grid-area: dot-four;
+}
+
+#dice-o-dot-fi{
+    grid-area: dot-five;
+}
+
+#dice-o-dot-s{
+    grid-area: dot-six;
+}
+
+#dice-o-dot-se{
+    grid-area: dot-seven;
+}
+
+#dice-o-dot-ei{
+    grid-area: dot-eight;
+}
+
+#dice-o-dot-ni{
+    grid-area: dot-nine;
+}
+
+#dice-t-dot-o{
+    grid-area: dot-one;
+}
+
+#dice-t-dot-tw{
+    grid-area: dot-two;
+}
+
+#dice-t-dot-th{
+    grid-area: dot-three;
+}
+
+#dice-t-dot-fo{
+    grid-area: dot-four;
+}
+
+#dice-t-dot-fi{
+    grid-area: dot-five;
+}
+
+#dice-t-dot-s{
+    grid-area: dot-six;
+}
+
+#dice-t-dot-se{
+    grid-area: dot-seven;
+}
+
+#dice-t-dot-ei{
+    grid-area: dot-eight;
+}
+
+#dice-t-dot-ni{
+    grid-area: dot-nine;
+}
