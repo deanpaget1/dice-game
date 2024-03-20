@@ -1,34 +1,37 @@
-Object.onload = refreshDice();
+resetDice(1);
+resetDice(2);
 
-function refreshDice() {
-  var diceOneValue = 6;
-  var diceTwoValue = 6;
+document.addEventListener("keydown", function(event){
+  if(event.key === "d"){
+    var diceOneValue = 6;
+    var diceTwoValue = 6;
 
-  diceOneValue = Math.floor(Math.random() * 6) + 1;
-  diceTwoValue = Math.floor(Math.random() * 6) + 1;
+    diceOneValue = Math.floor(Math.random() * 6) + 1;
+    diceTwoValue = Math.floor(Math.random() * 6) + 1;
 
-  setNewDiceOne(diceOneValue);
-  setNewDiceTwo(diceTwoValue);
+    setNewDiceOne(diceOneValue);
+    setNewDiceTwo(diceTwoValue);
 
-  if (diceOneValue > diceTwoValue) {
-    document.querySelector(".title h1").textContent = "Player One Wins!";
-    document.querySelector("#first-dice h2").innerHTML =
-      "WINNER! <img src='./photos/trophy.png' width='30px'>";
-    document.querySelector("#second-dice h2").innerHTML =
-      "LOSER! <img src='./photos/loser.png' width='30px'>";
-  } else if (diceTwoValue > diceOneValue) {
-    document.querySelector(".title h1").textContent = "Player Two Wins!";
-    document.querySelector("#second-dice h2").innerHTML =
-      "WINNER! <img src='./photos/trophy.png' width='30px'>";
-    document.querySelector("#first-dice h2").innerHTML =
-      "LOSER! <img src='./photos/loser.png' width='30px'>";
-  } else {
-    document.querySelector(".title h1").textContent = "Draw! Roll Again!";
-    document.querySelector("#first-dice h2").textContent = "ROLL AGAIN!";
-    document.querySelector("#second-dice h2").textContent = "ROLL AGAIN!";
+    if (diceOneValue > diceTwoValue) {
+      document.querySelector(".title h1").textContent = "Player One Wins!";
+      document.querySelector("#first-dice h2").innerHTML =
+        "WINNER! <img src='./photos/trophy.png' width='30px'>";
+      document.querySelector("#second-dice h2").innerHTML =
+        "LOSER! <img src='./photos/loser.png' width='30px'>";
+    } else if (diceTwoValue > diceOneValue) {
+      document.querySelector(".title h1").textContent = "Player Two Wins!";
+      document.querySelector("#second-dice h2").innerHTML =
+        "WINNER! <img src='./photos/trophy.png' width='30px'>";
+      document.querySelector("#first-dice h2").innerHTML =
+        "LOSER! <img src='./photos/loser.png' width='30px'>";
+    } else {
+      document.querySelector(".title h1").textContent = "Draw! Roll Again!";
+      document.querySelector("#first-dice h2").textContent = "ROLL AGAIN!";
+      document.querySelector("#second-dice h2").textContent = "ROLL AGAIN!";
+    }
+    document.querySelector(".title h6").textContent = "Press D to play again!";
   }
-  document.querySelector(".title h6").textContent = "Refresh to play again!"
-}
+});
 
 function setNewDiceOne(number) {
   if (number === 1) {
