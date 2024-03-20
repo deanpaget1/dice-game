@@ -27,6 +27,7 @@ function refreshDice() {
     document.querySelector("#first-dice h2").textContent = "ROLL AGAIN!";
     document.querySelector("#second-dice h2").textContent = "ROLL AGAIN!";
   }
+  document.querySelector(".title h6").textContent = "Refresh to play again!"
 }
 
 function setNewDiceOne(number) {
